@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -94,7 +96,8 @@ body {
 }
 
 .banner h1 {
-  font-size: 3rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.4rem;
 }
 
 .banner p.desc {
@@ -115,11 +118,12 @@ body {
 
 .number {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .number .highlight {
   font-size: 2rem;
-  color: blue;
+  color: #2c27b2;
 }
 
 .figure span {
@@ -135,6 +139,7 @@ body {
 }
 
 .tabs li {
+  font-family: "Libre Baskerville", serif;
   display: inline-block;
   padding: 0.8rem 1.5rem;
 }
@@ -163,7 +168,6 @@ body {
 
 .conditions {
   display: flex;
-  align-items: center;
   padding: 2rem;
   gap: 3rem;
 }
@@ -172,9 +176,14 @@ body {
   flex: 1;
 }
 
+.search-button {
+  justify-content: center;
+  align-self: center;
+}
+
 .certiria {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .certiria span {
@@ -193,7 +202,7 @@ body {
 .value {
   font-weight: bold;
   font-size: 0.8rem;
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
 }
 
 .rounded {
@@ -204,4 +213,29 @@ body {
 
 .search {
   border-radius: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.conditions li {
+  position: relative;
+}
+.conditions li:not(:first-child)::before {
+  content: "";
+  border: 2px solid #c3defe;
+  position: absolute;
+  height: 100%;
+  left: -1.5rem;
+
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.search-button {
+  height: 100%;
+}
+
+.search-button button {
+  font-size: 1.2rem;
+  width: 80%;
 }
