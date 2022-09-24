@@ -12,78 +12,87 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background">
+    <div class="banner">
       <div class="content">
         <header>
           <nav>
             <ul class="nav-list">
-              <li class="list-item">
-                <a href="#"><div class="logo">Real</div></a>
-              </li>
+              <li class="list-item"><a href="#" class="logo">Real</a></li>
               <li class="list-item"><a href="#" class="actived">Home</a></li>
-              <li class="list-item"><a href="#">About</a></li>
-              <li class="list-item"><a href="#">Type of House</a></li>
+              <li class="list-item"><a href="#">Types</a></li>
               <li class="list-item"><a href="#">Contact</a></li>
+              <li class="list-item"><a href="#">About</a></li>
               <li class="list-item">
-                <button class="button-primary">Login</button>
+                <a href="#" class="primary-button">Login</a>
               </li>
             </ul>
           </nav>
         </header>
 
         <section class="hero">
-          <h1>Find Real Estate That Suits You.</h1>
-          <p>
-            We provide a complete service for the sale, purchase or rental of
-            real estate.
-          </p>
-          <ul class="features">
-            <li class="feature">
-              <div class="number">250+</div>
-              <div class="desc">Google Reviews</div>
-            </li>
-            <li class="feature">
-              <div class="number">12+</div>
-              <div class="desc">Years Experience</div>
-            </li>
-            <li class="feature">
-              <div class="number">50+</div>
-              <div class="desc">Award Winning</div>
-            </li>
-          </ul>
+          <div class="left">
+            <h1>Find Real Estate That Suits You</h1>
+            <p>
+              We provide a complete service for the sale, purchase or rental of
+              real estate.
+            </p>
+            <ul class="features">
+              <li class="feature">
+                <div class="number">250<span class="highlight">+</span></div>
+                <div class="desc">Google Reviews</div>
+              </li>
+              <li class="feature">
+                <div class="number">12<span class="highlight">+</span></div>
+                <div class="desc">Years of experiences</div>
+              </li>
+              <li class="feature">
+                <div class="number">50<span class="highlight">+</span></div>
+                <div class="desc">Award Winning</div>
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="search-box">
+        <section class="search">
           <ul class="tabs">
-            <li class="type actived"><a href="#">Rent</a></li>
-            <li class="type"><a href="#">Buy</a></li>
-            <li class="type"><a href="#">Sell</a></li>
+            <li class="actived">Rent</li>
+            <li>Buy</li>
+            <li>Sell</li>
           </ul>
-          <div class="creteria">
+
+          <div class="search-conditions">
             <ul>
-              <li class="condition">
-                <span class="material-symbols-outlined"> explore </span>
-                <div class="pair">
-                  <div class="by">Location</div>
-                  <div class="value">Bangladesh, Dhaka</div>
+              <li>
+                <div class="condition">
+                  <span class="material-symbols-outlined"> public </span>
+                  <div class="input">
+                    <div class="type">Location</div>
+                    <div class="value">Bangladesh, Dhaka</div>
+                  </div>
                 </div>
               </li>
-              <li class="condition">
-                <span class="material-symbols-outlined"> house </span>
-                <div class="pair">
-                  <div class="by">Property Type</div>
-                  <div class="value">Deluxe</div>
+              <li>
+                <div class="condition">
+                  <span class="material-symbols-outlined"> house </span>
+                  <div class="input">
+                    <div class="type">Property Type</div>
+                    <div class="value">Deluxe</div>
+                  </div>
                 </div>
               </li>
-              <li class="condition">
-                <span class="material-symbols-outlined"> price_check </span>
-                <div class="pair">
-                  <div class="by">Average Price</div>
-                  <div class="value">$5000/$7000</div>
+              <li>
+                <div class="condition">
+                  <span class="material-symbols-outlined"> sell </span>
+                  <div class="input">
+                    <div class="type">Average price</div>
+                    <div class="value">$5000/$7000</div>
+                  </div>
                 </div>
               </li>
-              <li class="condition">
-                <button class="button-primary rounded">Search</button>
+              <li>
+                <div class="condition">
+                  <button class="primary-button">Search</button>
+                </div>
               </li>
             </ul>
           </div>

@@ -1,91 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: rgba(250, 250, 250, 1);
+a {
+  text-decoration: none;
+  color: black;
 }
 
 li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
 :root {
-  --color-text: black;
+  --font-text: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-highlight: "Libre Baskerville", serif;
 }
 
-.background {
-  position: relative;
+body {
+  font-family: var(--font-text);
+  background-color: rgba(250, 250, 250);
+}
+/* banner */
+
+.banner {
   width: 100vw;
-  height: 58vh;
+  height: 50vh;
+  padding-block: 1rem;
   background-image: url("assets/bridge.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
-.background::before {
+.banner::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 
   background-image: linear-gradient(
     to right,
-    rgba(250, 250, 250, 1) 40%,
-    rgba(250, 250, 250, 0.9) 60%,
-    rgba(250, 250, 250, 0.5) 70%,
+    rgba(250, 250, 250, 1),
+    rgba(250, 250, 250, 0.8) 50%,
     transparent
   );
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .content {
-  width: min(800px, calc(80% - 2rem));
+  width: 800px;
   margin-inline: auto;
   position: relative;
 }
 
-header {
-  padding-block: 1rem;
-}
-
+/* nav list */
 .nav-list {
   display: flex;
+  gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .nav-list li:first-child {
   margin-right: auto;
 }
 
-.nav-list li a {
-  padding-inline: 1rem;
-}
-
 .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.button-primary {
-  appearance: none;
-  border: none;
-  padding: 0.6rem 1.5rem;
-  margin-left: 1rem;
-  background-color: black;
-  color: white;
+  font-family: var(--font-highlight);
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -93,116 +81,129 @@ a.actived {
   font-weight: bold;
 }
 
+.primary-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* hero */
+
 .hero {
   margin-block: 4rem;
+}
+
+.left {
   width: 50%;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-family: var(--font-highlight);
+  font-size: 2.8rem;
 }
 
 .hero p {
-  line-height: 1.5;
   color: #999;
+  margin-block: 2rem;
 }
 
 .features {
   display: flex;
-  margin-block: 2rem;
+  gap: 0.2rem;
 }
 
 .feature {
   flex: 1;
 }
 
-.feature .number {
+.number {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.feature .desc {
+.highlight {
+  color: cornflowerblue;
+}
+
+.desc {
   font-size: 0.8rem;
   color: #999;
 }
 
-.tabs {
+/* search */
+ul.tabs {
   display: flex;
 }
 
-.tabs .type {
+ul.tabs li {
   padding: 1rem 2rem;
   background-color: black;
+  color: white;
   font-weight: bold;
+  font-family: var(--font-highlight);
 }
 
-.tabs .type:first-child {
+ul.tabs li:first-child {
   border-radius: 1rem 0 0 0;
 }
 
-.tabs .type:last-child {
+ul.tabs li:last-child {
   border-radius: 0 1rem 0 0;
 }
 
-.tabs a {
-  color: white;
-}
-
-.tabs .actived {
+ul.tabs li.actived {
   background-color: white;
-}
-
-.tabs .actived a {
   color: black;
 }
 
-.creteria {
+.search-conditions {
+  padding: 2rem;
   background-color: white;
-  padding: 1rem 2rem;
-  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  border-radius: 0 1rem 1rem 1rem;
 }
 
-.creteria ul {
+.search-conditions ul {
   display: flex;
-  justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap;
 }
 
-.creteria li {
+.search-conditions ul li {
   flex: 1;
-}
-
-.condition {
-  display: flex;
-  gap: 0.5rem;
   position: relative;
 }
 
-.condition:not(:first-child)::before {
+.search-conditions ul li:not(:first-child)::before {
   content: "";
   position: absolute;
-  border: 2px solid red;
+  border: 2px solid skyblue;
   height: 100%;
   left: -1.5rem;
   border-radius: 2px;
 }
 
-.by {
-  color: #999;
+.condition {
+  display: flex;
   font-size: 0.8rem;
+}
+
+.input {
+  margin-left: 0.2rem;
+}
+
+.type {
+  color: #999;
+  margin-bottom: 0.4rem;
 }
 
 .value {
-  margin-top: 0.4rem;
-  font-size: 0.8rem;
   font-weight: bold;
 }
 
-.rounded {
-  border-radius: 0.4rem;
-  width: 100%;
+button.primary-button {
+  appearance: none;
+  border: none;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
-  font-weight: normal;
+  padding: 1rem 2rem;
 }
